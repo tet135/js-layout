@@ -1,0 +1,66 @@
+@use '../../style/layout.scss' as s;
+
+.community {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tab_menu {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    
+}
+
+.tab {
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 200%;
+    text-align: center;
+    border-bottom: 2px solid s.color(text-light);
+    color: s.color(text-light);
+    transition: 0.7s opacity;
+
+    &:hover {
+        opacity: 0.5;
+        cursor: pointer;
+    }
+
+    &--active {
+        color: s.color(dark);
+        border-bottom-color: s.color(dark);
+    }
+}
+
+.commun_info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.commun_title {
+    font-size: 18px;
+    color: s.color(dark);
+}
+
+.commun_text {
+    color: s.color(text-light);
+    text-align: justify;
+}
+
+.commun_button {
+    background-color: s.color(text-orange);
+    color: s.color(wight);
+    text-align: center;
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 16px;
+    transition: 0.7s opacity;
+
+    &:hover {
+        opacity: 0.5;
+        cursor: pointer;
+    }
+}

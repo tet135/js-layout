@@ -1,7 +1,70 @@
-@use '../../style' as s;
+@use '../../style/layout.scss' as s;
 
-main {
-	background: s.color(dark);
-	color: s.color(light);
-	padding: s.space(4);
-} 
+
+
+.post__list {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.post {
+	display: flex;
+	flex-direction: column;
+	padding: 12px;
+	gap: 8px;
+	border-radius: 10px;
+	background-color: s.color(background-grey);
+
+	&--viewed {
+		border: 1px solid s.color(background-grey);
+		background-color: s.color(wight);
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		gap: 8px;
+		height: fit-content;
+	}
+
+	&__categories {
+		display: flex;
+		flex-direction: row;
+		gap: 8px;
+	}
+
+	&__category {
+		padding: 8px;
+		background-color: s.color(background-grey);
+		border-radius: 8px;
+		color: s.color(text-dark);
+		font-size: 12px;
+
+	}
+
+	&__category--orange {
+		background-color: s.color(background-orange);
+		color: s.color(text-orange);
+	}
+
+	&__category--pink {
+		background-color: s.color(background-pink);
+		color: s.color(text-pink);
+	}
+	
+
+
+	&__date {
+		color: s.color(text-light)
+	}
+
+	&__message {
+		font-size: 16px;
+		color: s.color(text-dark);
+		
+	}
+}
+
